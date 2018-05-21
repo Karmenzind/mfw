@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>行政区热力图</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+</head>
+<body>
+<div id="container" class="container"></div>
+<script src="http://webapi.amap.com/loca?key=a712e9ff84c46e7a091b19a716f55e0a"></script>
+<script src="http://a.amap.com/Loca/static/dist/jquery.min.js"></script>
+<script>
+
+    $.get('./data/district_poi.csv', function (data) {
+
+        var map = Loca.create('container', {
+            features: ['bg', 'road'],
+            center: [107.4976, 32.1697],
+            zoom: 4
+        });
+
+        var layer = Loca.visualLayer({
+            container: map,
+            type: 'heatmap',
+            shape: 'district'
+        });
+
+        layer.setData(data, {
+            type: 'csv',
+            lnglat: 'coordinates',
+            value: 'score'
+        });
+
+        layer.setOptions({
+            mode: 'count',
+            style: {
+                opacity: 0.9
+            }/*,
+            gradient: {
+                0.5: 'blue',
+                0.65: 'rgb(117,211,248)',
+                0.7: 'rgb(0, 255, 0)',
+                0.9: '#ffea00',
+                1.0: 'red'
+            }*/
+        });
+
+        layer.render();
+
+    });
+
+</script>
+</body>
+</html>
