@@ -38,16 +38,16 @@ DOWNLOAD_DELAY = 2
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
+# DEFAULT_REQUEST_HEADERS = {
 #   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
 #   'Accept-Language': 'en',
-#}
+# }
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
+# SPIDER_MIDDLEWARES = {
 #    'MFWSpider.middlewares.MfwspiderSpiderMiddleware': 543,
-#}
+# }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
@@ -57,12 +57,11 @@ DOWNLOADER_MIDDLEWARES = {
 }
 
 
-
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
+# EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+# }
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
@@ -104,7 +103,7 @@ DOWNLOADER_MIDDLEWARES.update({
 })
 
 SPIDER_MIDDLEWARES = {
-        'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
+    'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
 }
 
 DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
@@ -115,7 +114,7 @@ DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 
 
 USE_LOCAL_PROXY_SERVICE = 1
-LOCAL_PROXY_SERVICE_TYPE = 'http'  # file or http TODO: database 
+LOCAL_PROXY_SERVICE_TYPE = 'http'  # file or http TODO: database
 PROXY_LIST_FILE = '/home/k/Documents/proxy_list.json'
 LOCAL_PROXY_SEVICE_HTTP_URL = 'http://localhost:8111'
 
@@ -123,3 +122,15 @@ RETRY_TIMES = 10
 
 IS_TEST = False
 
+NOTE_KEYWORDS = (
+    '清明节',
+    '清明',
+    '清明假期',
+    '清明假',
+    '清明习俗',
+    '清明小长假',
+    '四月五日',
+    '四月',
+    '四月四日',
+    '四月六日',
+)

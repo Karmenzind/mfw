@@ -175,9 +175,9 @@ def main():
         for doc in _gen:
             parsed += 1
 
-            if parsed < 3307:
-                print("Ignore: ", parsed)
-                continue
+            # if parsed < 3307:
+            #     print("Ignore: ", parsed)
+            #     continue
 
             parse_note(doc)
             bar.update(parsed)
