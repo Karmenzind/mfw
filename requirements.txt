@@ -92,7 +92,7 @@ traitlets==4.3.2
 Twisted==18.4.0
 txlib==0.0.0
 unittest2==1.1.0
-urllib3==1.22
+urllib3==1.24.2
 w3lib==1.19.0
 wcwidth==0.1.7
 webencodings==0.5.1
