@@ -39,7 +39,7 @@ jupyter-console==5.2.0
 jupyter-core==4.4.0
 kiwisolver==1.0.1
 linecache2==1.0.0
-lxml==4.2.1
+lxml==4.6.2
 MarkupSafe==1.0
 matplotlib==2.2.2
 mistune==0.8.3
