@@ -5,7 +5,7 @@ Automat==0.6.0
 Babel==2.5.3
 backcall==0.1.0
 beautifulsoup4==4.6.0
-bleach==3.1.4
+bleach==3.3.0
 bs4==0.0.1
 certifi==2018.4.16
 cffi==1.11.5
